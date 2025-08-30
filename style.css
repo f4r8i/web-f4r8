@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0632d2;
+  --bg-2: #0a0e1b;
+  --card: #7a22ff56;
+  --stroke: #00000022;
+  --text: #e9eef6;
+  --muted: #b1bbce;
+  --accent: #8575ff;   
+  --accent-2: #d86bf9; 
+  --radius: 14px;
+  --shadow: 0 10px 24px rgba(0,0,0,.25);
+}
+body {
+  background: linear-gradient(135deg, var(--bg), var(--bg-2));
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+.container { 
+  width: min(1100px, 92%); 
+  margin-inline: auto;
+
+}
+
+.site-header{
+  padding: 36px 0 28px;
+  border-bottom: 1px solid #e35c0d15;
+  background:
+    radial-gradient(900px 300px at 0% -20%, #a78bfa20, transparent 60%),
+    radial-gradient(900px 300px at 100% -30%, #7c9cff25, transparent 60%);
+  text-align: center;
+}
+
+.site-header h1 { 
+  font-size: clamp(20px, 3.5vw, 36px); 
+  font-weight: 650; 
+  letter-spacing:.3px;
+}
+
+.tagline { 
+  margin-top: 6px; 
+  color: var(--muted); 
+  font-size: clamp(12px, 2.2vw,15px); 
+}
+
+.navbar {
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, #0412428d, #002184ba);
+  border-bottom: 1px solid #ffffff18;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 10px 0;
+  overflow-x: auto;         
+  scrollbar-width: thin;
+}
+.menu li { 
+  flex: 0 0 auto; 
+}
+
+.menu a{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: calc(var(--radius) - 4px);
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: #6b5cf90f;
+  transition: transform .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.menu a:hover{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: var(--stroke);
+  color: #1b1f2b;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(38, 31, 93, 0.4);
+}
+
+.menu a.active{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #1b1f2b;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+
+.content {
+  padding: 22px 0 40px;
+}
+
+.content p{
+  background: linear-gradient(90deg, var(--card), transparent);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  line-height: 1.7;
+}
+
+footer {
+  background: #0a0e1b;
+  color: #b1bbce;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid #353db256;
+}
+
+@media (max-width: 560px){
+  .site-header { padding: 28px 0 22px; }
+  .menu { gap: 6px; }
+  .menu a { padding: 9px 12px; }
+}
+
+
+/* css yang saya buat masi melihat materi dan menanyakan pada chat gpt sepert ingin menambahkan sesuatu
+sepert footer di taruh ke bawah serta untuk melihat dan memperbaiki eror dan memperbagus web saya,dan saya
+sudah mulai paham tentang css dan kode html yang digabungkan dalam css, terima kasih. */
+
+/* jika masi ada yang salah atau kurang, tolong sarannya pak */
